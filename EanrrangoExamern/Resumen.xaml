@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EanrrangoExamern.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Resumen" FontSize="24" HorizontalTextAlignment="Center" FontAttributes="Italic"/>
+
+            <Label Text="Usuario Conectado" FontSize="20"  HorizontalTextAlignment="Start" />
+            <Label x:Name="lblusuarioC" FontSize="20"  HorizontalTextAlignment="Start" />
+
+            <Grid Margin="20,35,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <BoxView Grid.Column="0" Grid.Row="0" Color="LightBlue" />
+                <Label Grid.Column="0" Grid.Row="0"  Text="Nombre :" HorizontalOptions="Center" VerticalOptions="Center" />
+                <BoxView Grid.Row="0" Grid.Column="1" Color="Yellow" />
+                <Label Grid.Row="0" Grid.Column="1"  x:Name="lblNombreR" FontAttributes="Bold"/>
+
+
+
+                <BoxView Grid.Column="0" Grid.Row="1" Color="LightBlue" />
+                <Label Grid.Column="0" Grid.Row="1" Text="Pago Total :" HorizontalOptions="Center" VerticalOptions="Center" />
+                <BoxView Grid.Row="1" Grid.Column="1" Color="Yellow" />
+                <Label Grid.Row="1" Grid.Column="1"  x:Name="lblpagoTotalR" FontAttributes="Bold"/>
+
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

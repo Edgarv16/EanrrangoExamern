@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EanrrangoExamern.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Login" FontSize="24" HorizontalTextAlignment="Center" FontAttributes="Italic"/>
+            
+            <Image Source="uisrael.png" WidthRequest="200" HeightRequest="200"/>
+
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+
+                <BoxView Grid.Row="0" Grid.Column="0"  Color="CadetBlue" />
+                <Label Text="Usuario" FontSize="20"  HorizontalTextAlignment="Center" Grid.Row="0"  Grid.Column="0"/>
+                <BoxView Grid.Row="0" Grid.Column="1" Color="Gray" />
+                <Entry x:Name="txtUsuario"  Placeholder="Ingrese el Usuario"  Grid.Row="0"  Grid.Column="1"></Entry>
+
+                <BoxView Grid.Row="1" Grid.Column="0"  Color="CadetBlue" />
+                <Label Text="Clave" FontSize="20" HorizontalTextAlignment="Center" Grid.Row="1"  Grid.Column="0"/>
+                <BoxView Grid.Row="1" Grid.Column="1" Color="Gray" />
+                <Entry x:Name="txtPassword"  Placeholder="Contraseña" IsPassword="True" Grid.Row="1"  Grid.Column="1"></Entry>
+
+                <Button x:Name="btnIngresar" Text="LOGIN" Clicked="btnIngresar_Clicked" Grid.Row="3"  Grid.Column="0"></Button>
+
+                <Button x:Name="btnAbrirRegistro" Text="REGISTRAR" Clicked="btnAbrirRegistro_Clicked" Grid.Row="3"  Grid.Column="1"></Button>
+
+
+
+
+            </Grid>
+
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

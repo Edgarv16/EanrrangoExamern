@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EanrrangoExamern.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro" FontSize="25" HorizontalTextAlignment="Center" FontAttributes="Italic"/>
+            
+            <Label Text="Usuario Conectado" FontSize="20"  HorizontalTextAlignment="Start" />
+
+            <Label x:Name="lblUsuario"  Text="Usuario" FontSize="20"  HorizontalTextAlignment="Start" />
+
+
+            <Grid Margin="20,35,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <BoxView Color="LightBlue" />
+                <Label Grid.Column="0" Grid.Row="0" Text="Nombre : " HorizontalOptions="Center" VerticalOptions="Center" />
+
+                <BoxView Grid.Column="1" Grid.Row="0" Color="DimGray" />
+                <Entry Grid.Column="1" Grid.Row="0" x:Name="txtNombre" Placeholder="Ingresar Nombre "  Keyboard="Text" ></Entry>
+
+
+
+                <BoxView Grid.Column="0" Grid.Row="1" Color="LightBlue" />
+                <Label Grid.Column="0" Grid.Row="1" Text="MontoInicial :" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                <BoxView Grid.Row="1" Grid.Column="1" Color="DimGray" />
+                <Entry Grid.Row="1" Grid.Column="1"  x:Name="txtMontoInicial" Placeholder="Valor Inicial "  Keyboard="Numeric" />
+
+                <BoxView Grid.Column="0" Grid.Row="2" Color="LightBlue" />
+                <Label Grid.Column="0" Grid.Row="2" Text="Pago Mensual:" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                <BoxView Grid.Row="2" Grid.Column="1" Color="DimGray" />
+                <Entry Grid.Row="2" Grid.Column="1" x:Name="txtPagoMensual" Placeholder="Pago mensual "  IsEnabled="False" />
+
+
+            </Grid>
+            <Button x:Name="btnCalcPagoMensual" Text="CALCULAR PAGO MENSUAL" Clicked="btnCalcPagoMensual_Clicked"  ></Button>
+
+            <Button x:Name="btnGuardar" Text="GUARDAR" Clicked="btnGuardar_Clicked"  ></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
